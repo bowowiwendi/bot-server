@@ -26,10 +26,10 @@ sudo mkdir -p $INSTALL_DIR
 sudo chown $USER:$USER $INSTALL_DIR
 cd $INSTALL_DIR
 
-# Buat virtual environment
-echo -e "Membuat virtual environment..."
-python3 -m venv venv
-source venv/bin/activate
+# # Buat virtual environment
+# echo -e "Membuat virtual environment..."
+# python3 -m venv venv
+# source venv/bin/activate
 
 # Install library yang diperlukan
 echo -e "Menginstal library Python..."
