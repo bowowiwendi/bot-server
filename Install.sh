@@ -24,7 +24,6 @@ sudo apt-get install -y python3 python3-pip python3-venv git
 # Buat direktori instalasi
 log_message "Membuat direktori instalasi di $INSTALL_DIR..."
 sudo mkdir -p $INSTALL_DIR
-sudo chown $USER:$USER $INSTALL_DIR
 cd $INSTALL_DIR
 
 # Buat virtual environment
