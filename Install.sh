@@ -63,12 +63,13 @@ EOF
 
 # Reload systemd dan start service
 echo -e "Mengaktifkan dan menjalankan service..."
-sudo systemctl daemon-reload
-sudo systemctl enable $SERVICE_NAME
-sudo systemctl start $SERVICE_NAME
+systemctl daemon-reload
+systemctl start $SERVICE_NAME
+systemctl enable $SERVICE_NAME
+systemctl restart $SERVICE_NAME
 
 # Tampilkan status service
 echo -e "Memeriksa status service..."
-sudo systemctl status $SERVICE_NAME
+#systemctl status $SERVICE_NAME
 
 echo -e "Instalasi selesai! Bot Telegram berhasil diinstal dan dijalankan sebagai service."
