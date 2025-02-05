@@ -37,12 +37,12 @@ pip install python-telegram-bot paramiko
 
 # Download script bot
 echo -e "Mengunduh script bot..."
-wget -O bot_manager.py https://raw.githubusercontent.com/bowowiwendi/bot-server/refs/heads/main/bot-server.py
+wget -O bot-server.py https://raw.githubusercontent.com/bowowiwendi/bot-server/refs/heads/main/bot-server.py
 
 # Ganti token dan admin ID di script bot
 echo -e "Mengatur token dan admin ID..."
-sed -i "s/YOUR_TOKEN/$BOT_TOKEN/g" bot_manager.py
-sed -i "s/ADMIN_IDS = \[.*\]/ADMIN_IDS = \[$(echo $ADMIN_IDS | sed 's/ /, /g')\]/g" bot_manager.py
+sed -i "s/YOUR_TOKEN/$BOT_TOKEN/g" bot-server.py
+sed -i "s/ADMIN_IDS = \[.*\]/ADMIN_IDS = \[$(echo $ADMIN_IDS | sed 's/ /, /g')\]/g" bot-server.py
 
 # Buat service systemd
 echo -e "Membuat service systemd..."
@@ -54,7 +54,7 @@ After=network.target
 [Service]
 User=$USER
 WorkingDirectory=$INSTALL_DIR
-ExecStart=$INSTALL_DIR/venv/bin/python3 $INSTALL_DIR/bot_manager.py
+ExecStart=$INSTALL_DIR/venv/bin/python3 $INSTALL_DIR/bot-server.py
 Restart=always
 
 [Install]
