@@ -37,7 +37,7 @@ pip install python-telegram-bot paramiko
 
 # Download script bot
 echo -e "Mengunduh script bot..."
-wget -O bot_manager.py https://raw.githubusercontent.com/username/repository/main/bot_manager.py
+wget -O bot_manager.py https://raw.githubusercontent.com/bowowiwendi/bot-server/refs/heads/main/bot-server.py
 
 # Ganti token dan admin ID di script bot
 echo -e "Mengatur token dan admin ID..."
