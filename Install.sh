@@ -8,6 +8,7 @@ function log_message {
 }
 
 # Meminta input dari pengguna
+read -p "Masukkan Username : " USER
 read -p "Masukkan Token Bot Telegram: " BOT_TOKEN
 read -p "Masukkan User ID Admin (pisahkan dengan spasi jika lebih dari satu): " ADMIN_IDS
 
